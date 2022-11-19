@@ -1,0 +1,124 @@
+body{
+    background-color: #eee;
+    margin:0;
+}
+.container{
+    width:1200px;
+    max-width: 100%;
+    margin:5vh auto;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+.menu{
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding:20px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color:#bfc0c3;
+}
+.menu li{
+    padding:20px 0;
+    transition: 0.5s;
+}
+.menu li.active,
+.menu li:hover
+{
+    color:#866DF4;
+}
+.content{
+    background-color: #F5F7FB;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:20px;
+    font-family: monospace;
+}
+.list{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 5%;
+    row-gap: 30px;
+}
+[class^="item"]{
+    background-color: #fff;
+    color:#7794EA;
+    padding:10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 50px #eee;
+    display: grid;
+    grid-template-columns: 30px auto;
+    column-gap: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+[class^="item"]::before{
+    position: absolute;
+    top:10%;
+    left:-12px;
+    height:80%;
+    width:5px;
+    content:'';
+    background-color: #7794EA;
+    border-radius: 5px;
+}
+[class^="item"] .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[class^="item"] i{
+    background-color: #EEF6FF;
+    padding:10px;
+    border-radius: 50%;
+}
+[class^="item"] .title{
+    font-weight: bold;
+    font-size: large;
+    color:#555;
+}
+[class^="item"] .des{
+    color: #555;
+    opacity: 0.6;
+    margin:10px 0;
+}
+[class^='item'] .time{
+    font-weight: bold;
+}
+[class^="item"] .item{
+    font-weight: bold;
+}
+[class*="-warning"]{
+    color: #F6DC9A;
+}
+[class*="-warning"]::before{
+    background-color: #F6DC9A;
+}
+[class*="-warning"] i{
+    background-color: #FFF3D9;
+}
+[class*='-danger']{
+    color:#FE7F7C;
+    background-color: #FEEAEA;
+}
+[class*='-danger']::before{
+    background-color: #FE7F7C;
+}
+[class*='-disabled']{
+    cursor: not-allowed;
+}
+[class$='-hoverTop']:hover{
+    transform: translate(0,-10px);
+}
+[class$='-hoverZoom']:hover{
+    transform: scale(1.2);
+}
+[class^='title'][class*='-danger']{
+    background-color: transparent;
+}
